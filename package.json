@@ -1,0 +1,26 @@
+{
+  "name": "slap-robin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "csvtojson": "^2.0.10"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.0.1"
+  },
+  "scripts": {
+    "test": "mocha test-spec.js --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vanessayip/slap-robin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vanessayip/slap-robin/issues"
+  },
+  "homepage": "https://github.com/vanessayip/slap-robin#readme"
+}
