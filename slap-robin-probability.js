@@ -2,8 +2,6 @@
 This solution finds the applicant based on highest expected value (probability) of winning as opposed to the other solution which is more up to chance
 */
 
-const { compileApplicantsData } = require('./compile-applicants-data');
-
 const slapOff2 = (applicantsData) => {
     // prepopulate stats
     const stats = [];
@@ -104,13 +102,5 @@ const slapOff2 = (applicantsData) => {
     }
   }
   
-  const run = async () => {
-    const applicantsData = await compileApplicantsData();
-    const stats = slapOff2(applicantsData);
-    // sum each player's percentage of winning
-    const id = findWinningApplicant(stats);
-    console.log(`The applicant with the highest percentage of wins is ${applicantsData[id].Name}`);
-  }
-  
-  module.exports = { run, slapOff2, findWinningApplicant };
+  module.exports = { slapOff2, findWinningApplicant };
   

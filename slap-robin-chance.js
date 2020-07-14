@@ -2,8 +2,6 @@
 This solution is more up to chance as opposed to the expected value (probability)
 */
 
-const { compileApplicantsData } = require('./compile-applicants-data');
-
 const slapOff = (applicantsData) => {
   const wins = {};
   for (let i = 0; i < applicantsData.length; i++) {
@@ -99,11 +97,4 @@ const findWinningCandidate = (health1, health2) => {
   }
 }
 
-const run = async () => {
-  applicantsData = await compileApplicantsData();
-  const wins = slapOff(applicantsData);
-  const applicantId = findWinningApplicant(wins);
-  console.log(`The applicant with the highest number of wins is ${applicantsData[applicantId].Name}`);
-}
-
-module.exports = { run, slapOff, findWinningApplicant };
+module.exports = { slapOff, findWinningApplicant };
