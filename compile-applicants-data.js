@@ -1,5 +1,5 @@
 const csvtojson = require('csvtojson');
-const filePath = './temp/applicants.csv';
+const filePath = './data/applicants.csv';
 
 const compileApplicantsData = async () => {
   const applicantsData = await csvtojson().fromFile(filePath);
